@@ -6,13 +6,14 @@ const config: GatsbyConfig = {
     title: `LeeMir Gatsby Playground`,
   },
   plugins: [
+    `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-plugin-netlify-cms`,
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
-    }, 
+    },
   ],
-}
+};
 
-export default config
+export default config;
