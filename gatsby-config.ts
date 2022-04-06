@@ -10,6 +10,9 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-netlify-cms`,
     },
+    {
+      resolve: `gatsby-plugin-styled-components`
+    }
   ],
 };
 
