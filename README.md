@@ -1,54 +1,29 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal TypeScript starter
-</h1>
+# Gatsby Playground
 
-## 🚀 Quick start
+Gatsby + Netlify + Gatsby-Netlify-CMS 공부용 Repo.
 
-1.  **Create a Gatsby site.**
+## Install
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+### Environment
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby
-    ```
+> OS : Windows10 x64, macOS 12.3.1
+> Node : v16.14.2(LTS)
+> Yarn : v1.22.18
 
-2.  **Start developing.**
+### Dependencies
 
-    Navigate into your new site’s directory and start it up.
+```bash
+yarn install # 또는 그냥 yarn
+```
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+## Dotenv
 
-3.  **Open the code and start customizing!**
+```bash
+GATSBY_CONCURRENT_DOWNLOAD # 15로 설정. 기본값은 200 (줄이지 않으면 RAM 용량 초과로 실행 안됨)
+```
 
-    Your site is now running at http://localhost:8000!
+## Run
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+```bash
+yarn develop # 또는 yarn start
+```
