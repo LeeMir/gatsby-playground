@@ -17,7 +17,6 @@ export const query = graphql`
 `;
 
 export default function Template({ data }: { data: any }) {
-  console.log(data);
   const { markdownRemark: { frontmatter, html } } = data;
   return (
     <div>
