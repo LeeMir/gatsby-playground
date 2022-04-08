@@ -12,10 +12,16 @@ const config: GatsbyConfig = {
   },
   plugins: [
     `gatsby-plugin-offline`,
-    `gatsby-plugin-typescript`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-image`,
     `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-typescript`,
+      options: {
+        isTSX: true,
+        allExtensions: true,
+      },
+    },
     `gatsby-plugin-remove-fingerprints`,
     {
 			resolve: `gatsby-source-filesystem`,
