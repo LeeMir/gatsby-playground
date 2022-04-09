@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
+import Layout from '@components/Layout';
 
 const Container = styled.div`
   display: flex;
@@ -38,7 +39,7 @@ export const query = graphql`
 const IndexPage = ({ data }: { data: any }) => {
   const blog = data.allMarkdownRemark;
   return (
-    <div>
+    <Layout>
       <h4>{blog.totalCount} posts</h4>
       <Container>
         {blog.edges.map(({ node }: { node: any }) => {
@@ -49,7 +50,7 @@ const IndexPage = ({ data }: { data: any }) => {
           );
         })}
       </Container>
-    </div>
+    </Layout>
   );
 };
 
