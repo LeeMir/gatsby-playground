@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export const Container = styled.body`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100vw;

@@ -2,13 +2,13 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
 import Layout from '@components/Layout';
+import { MasonryInfiniteGrid } from '@egjs/react-infinitegrid';
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
   a {
-    max-width: 20%;
+    max-width: 25%;
     img {
       width: 100%;
     }
@@ -42,13 +42,19 @@ const IndexPage = ({ data }: { data: any }) => {
     <Layout>
       <h4>{blog.totalCount} posts</h4>
       <Container>
-        {blog.edges.map(({ node }: { node: any }) => {
-          return (
-            <Link to={node.fields.slug} key={node.id} >
-              <img src={node.frontmatter.image} alt={node.fields.slug} />
-            </Link>
-          );
-        })}
+        <MasonryInfiniteGrid
+          column={4}
+          gap={5}
+          align={'center'}
+        >
+          {blog.edges.map(({ node }: { node: any }) => {
+            return (
+              <Link to={node.fields.slug} key={node.id} >
+                <img key={node.id} src={node.frontmatter.image} alt={node.fields.slug} />
+              </Link>
+            );
+          })}
+        </MasonryInfiniteGrid>
       </Container>
     </Layout>
   );
