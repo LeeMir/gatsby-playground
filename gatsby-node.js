@@ -58,3 +58,17 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
   `
   createTypes(typeDefs)
 };
+
+exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
+  const output = getConfig().output || {};
+
+  actions.setWebpackConfig({
+    output,
+    resolve: {
+      alias: {
+        '@components': path.resolve(__dirname, 'src/components'),
+        '@templates': path.resolve(__dirname, 'src/templates'),
+      },
+    },
+  });
+};

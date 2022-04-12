@@ -17,6 +17,7 @@
   },
   "license": "0BSD",
   "dependencies": {
+    "@egjs/react-infinitegrid": "^4.2.1",
     "babel-plugin-styled-components": "^2.0.6",
     "gatsby": "^4.11.1",
     "gatsby-plugin-image": "^2.11.1",

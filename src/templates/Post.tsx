@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Layout from '@components/Layout';
 
 export const query = graphql`
   query MyQuery($slug: String) {
@@ -19,13 +20,13 @@ export const query = graphql`
 export default function Template({ data }: { data: any }) {
   const { markdownRemark: { frontmatter, html } } = data;
   return (
-    <div>
+    <Layout>
       <img src={frontmatter.image} alt={frontmatter.title} />
       <h1>{frontmatter.title}</h1>
       <h2>{frontmatter.date}</h2>
       <div
         dangerouslySetInnerHTML={{ __html: html }}
       />
-    </div>
+    </Layout>
   )
 };
